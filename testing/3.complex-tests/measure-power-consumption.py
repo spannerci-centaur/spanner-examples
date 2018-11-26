@@ -45,13 +45,13 @@ def measure_power_consumption():
     # The device runs some initialization actions in the beginning, which are
     # not indicative of the true power consumption. Therefore we wait for a
     # while for the initial conditions to pass
-    time.sleep(90)
+    time.sleep(9)
 
     # Start measuring power consumption
     testboard.startPowerMeasurement()
 
     # Measure for 5 minutes
-    time.sleep(5*60)
+    time.sleep(20)
 
     # Stop measuring power consumption
     testboard.stopPowerMeasurement()
