@@ -1,11 +1,11 @@
-# build_binary:
-#     builder: 'particle photon'
-#     binary_name: 'firmware/target/firmware.bin'
-#     script: cd $SPN_BUILDER_SDK && make PLATFORM=photon APPDIR=$SPN_PROJECT_DIR/firmware
+build_binary:
+    builder: 'particle photon'
+    binary_name: 'firmware/target/firmware.bin'
+    script: cd $SPN_BUILDER_SDK && make PLATFORM=photon APPDIR=$SPN_PROJECT_DIR/firmware
     
-testing:
-   pre_flight: echo "start"
-   script: 'testing/1.basic-tests/UART/uart_periph_mock/uart_periph_mock.py'
+# testing:
+#    pre_flight: echo "start"
+#    script: 'testing/1.basic-tests/UART/uart_periph_mock/uart_periph_mock.py'
 #    device_update:
 #        env_vars:
 #            - $SPN_PARTICLE_TOKEN
